@@ -1,4 +1,9 @@
 # Milhas-Angular
 
 
-Teste 1
+## Boas Praticas, para o projeto
+
+Modularização
+Lazy Loading
+Interceptors
+EsLint
