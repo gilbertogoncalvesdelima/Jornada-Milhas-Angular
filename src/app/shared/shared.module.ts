@@ -20,6 +20,8 @@ import { PassagemDestaqueComponent } from "./passagem-destaque/passagem-destaque
 import { PassagemComponent } from "./passagem/passagem.component";
 import { SeletorPassageiroComponent } from "./seletor-passageiro/seletor-passageiro.component";
 import { CommonModule } from "@angular/common";
+import { MaterialModule } from "../core/material/material.module";
+import { ReactiveFormsModule } from "@angular/forms";
 
 // Modulo Funcionalidade
 @NgModule ({
@@ -47,7 +49,9 @@ declarations: [
 ],
 imports: [
   // CommonModule, este modulo ele vai fornecer recursos amplamente utilizado pelo angular
-CommonModule
+CommonModule,
+MaterialModule,
+ReactiveFormsModule
 ],
 exports: [
   // Aqui podemos excolher o que queremos exports
