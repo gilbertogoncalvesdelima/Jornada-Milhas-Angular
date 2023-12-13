@@ -1,4 +1,4 @@
-# Milhas-Angular
+# Jornada-Milhas-Angular
 
 
 ## Boas Praticas, para o projeto
