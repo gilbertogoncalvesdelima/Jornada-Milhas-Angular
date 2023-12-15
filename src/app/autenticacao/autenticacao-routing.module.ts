@@ -1,5 +1,5 @@
-import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { NgModule } from "@angular/core";
 import { authGuard } from "./auth.guard";
 import { CadastroComponent } from "./cadastro/cadastro.component";
 import { LoginComponent } from "./login/login.component";
@@ -19,11 +19,10 @@ const routes: Routes = [
     component: PerfilComponent,
     canActivate: [authGuard]
   },
-]
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports:[RouterModule]
 })
-
-export class AutenticacaoRoutingModule {}
+export class AutenticacaoRoutingModule { }

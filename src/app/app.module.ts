@@ -10,11 +10,12 @@ import { AutenticacaoInterceptor } from './autenticacao/autenticacao.interceptor
 import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './core/material/material.module';
 import { HomeModule } from './home/home.module';
-import { BuscaModule } from './busca/busca.module';
+import { ErroModule } from './core/erro/erro.module';
+import { ErrosInterceptor } from './core/erro/erros.interceptor';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -25,13 +26,20 @@ import { BuscaModule } from './busca/busca.module';
     SharedModule,
     MaterialModule,
     HomeModule,
-    BuscaModule
+    ErroModule
   ],
-  providers: [{
-    provide: HTTP_INTERCEPTORS,
-    useClass: AutenticacaoInterceptor,
-    multi: true
-  }],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AutenticacaoInterceptor,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrosInterceptor,
+      multi: true
+    }
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
