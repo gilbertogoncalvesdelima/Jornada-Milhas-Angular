@@ -48,3 +48,14 @@ npm run start:dev
 ```js
 http://localhost:3000/
 ```
+## Resumo 
+
+Modularização: Foi dividido o projeto em módulos, tornando-o mais organizado, fácil de gerenciar e altamente escalável.
+
+Lazy Loading: Carregar módulos sob demanda, melhorando significativamente o desempenho de suas aplicações.
+
+Interceptor: A capacidade de interceptar e manipular solicitações HTTP é um recurso poderoso do angular que agora você pode aplicar.
+
+Gerenciamento de Erros: Lidar com erros de forma eficaz, garantindo uma melhor experiência para as pessoas usuárias da aplicação.
+
+ESLint: Implementação de boas práticas de codificação usando o ESLint, você está produzindo código limpo e de alta qualidade.
